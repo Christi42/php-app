@@ -4,6 +4,9 @@ RUN <<EOF
 apt-get update
 apt-get install --yes \
 git=1:2.30.2-1+deb11u2 \
+apt-get install -y apache2 \
+a2enmod rewrite \
+service apache2 restart \
 wget \
 ffmpeg \
 lsb-release
